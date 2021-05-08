@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- internal style -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            display: block;
+            background-color: black;
+            color: red;
+            position: sticky;
+            top: 0;
+        }
+        h1{
+            text-align: center;
+            padding: 10px;
+        }
+        .square{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            width: auto;
+            height: auto;
+            background-color: blue;
+            padding: 50px;
+            margin: 20px;
+            border: 5px solid black;
+        }
+        .square-child{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin: 20px;
+        }
+        .square-child .square-text{
+            position: relative;
+            top: 50%;
+            text-align: center;
+            transform: translate(0,-50%);
+
+        }
+        .square-text h3{
+            letter-spacing: 1.5px;
+        }
+        .square-child:nth-child(even){
+            background-color: gray;
+        }
+        .square-text h3:first-letter{
+            color: red;
+            font-size: 28px;
+        }
+        
+        .square:hover .square-child:nth-child(odd){
+            background-color: gray;
+        }
+        .square:hover .square-child:nth-child(even){
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- inline style -->
+    <div class="nav">
+        <h1 style="text-transform: uppercase;">hello webshine</h1>
+    </div>
+    <div style="margin-top: 10px;" class="square">
+        <div class="square-child">
+            <div class="square-text">
+                <h3>Low Cost</h3>
+            </div>
+        </div>
+        <div class="square-child">
+            <div class="square-text">
+                <h3>Partical</h3>
+            </div>
+        </div>
+        <div class="square-child">
+            <div class="square-text">
+                <h3>Project Based</h3>
+            </div>
+        </div>
+        <div class="square-child">
+            <div class="square-text">
+                <h3>Highly skilled</h3>
+            </div>
+        </div>
+    </div>
+    <div class="square_backSetImg">
+    </div>
+   <div class="card-main">
+    <div class="card">
+        <div class="card-head">
+            <h4>Creative</h4>
+        </div>
+        <div class="card-content">
+            <p>Creativity is defined as the tendency to generate or recognize ideas, alternatives, or possibilities that may be useful in solving problems, communicating with others, and entertaining ourselves and others.</p>
+        </div>
+        <div class="card-btn">
+            <button>Create More</button>
+        </div>
+    </div>
+   </div>
+</body>
+</html>
